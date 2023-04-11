@@ -298,6 +298,14 @@ def movePieceAndRotate(square1 : str, square2 : str):
     movePiece(square1, square2)
     rotate()
 
+def capturePiece(square : str):
+    moveToSquare(square)
+    pickupPiece()
+    # figure out x and y coordinates for bin
+    # Arm_constants.ARM.set_position(x, y, Arm_constants.POS_Z_HIGHEST_PIECE, 180, 0, 0, None, 100, 50, wait=True) 
+    dropPiece()
+
+
 # def saveCalibration(): #save POZ_Z_BOARD and SQUARE_LOCATIONS
 #     choice = input("Save calibration? (y/n): ")
 #     if choice == 'y':
